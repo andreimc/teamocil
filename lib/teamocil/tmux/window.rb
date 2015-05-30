@@ -21,6 +21,8 @@ module Teamocil
           # Panes need know the window layout
           pane.merge! layout: layout
 
+          pane.merge! orientation: pane["orientation"]
+
           Teamocil::Tmux::Pane.new(pane)
         end
       end
